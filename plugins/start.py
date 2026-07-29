@@ -84,8 +84,9 @@ async def start(client, message):
             [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/DeadxFuck")]
         ]
 
-        return await message.reply_text(
-            text=(f"""**👋 ʜᴇʟʟᴏ {mention}!
+        return await message.reply_photo(
+            photo="https://i.ibb.co/ZRmM9jLt/IMG-20260729-225814-934.jpg",
+            caption=(f"""**👋 ʜᴇʟʟᴏ {mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
 
@@ -109,7 +110,7 @@ async def start(client, message):
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
 🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
-            parse_mode=enums.ParseMode.MARKDOWN,
+            parse_mode=enums.ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
         )
@@ -735,7 +736,7 @@ async def callback(client, query):
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
 🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
-                parse_mode=enums.ParseMode.MARKDOWN,
+                parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             await query.answer()
@@ -758,7 +759,7 @@ async def callback(client, query):
             ]
 
             await query.message.edit_text(
-                text=(f"""🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
+                text=(f"""**🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
 
 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
 
@@ -777,8 +778,8 @@ async def callback(client, query):
 • ᴘʟᴇᴀsᴇ ᴠᴇʀɪꜰʏ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙᴇꜰᴏʀᴇ ᴄᴏɴꜰɪʀᴍɪɴɢ
 • ᴏɴᴄᴇ ᴄᴏɴꜰɪʀᴍᴇᴅ, ᴘᴀʏᴍᴇɴᴛ ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ ᴡɪʟʟ ʙᴇ ɢᴇɴᴇʀᴀᴛᴇᴅ
 ━━━━━━━━━━━━━━━━━━
-✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ"""),
-                parse_mode=enums.ParseMode.MARKDOWN,
+✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ**"""),
+                parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             await query.answer()
@@ -804,7 +805,7 @@ async def callback(client, query):
             upi_name = "KM Membership Bot"
             qr_image = generate_upi_qr(upi_id, upi_name, price)
 
-            caption = (f"""✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
+            caption = (f"""**✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
 
 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
 
@@ -816,7 +817,7 @@ async def callback(client, query):
 📱 ᴘᴀʏᴍᴇɴᴛ ɪɴsᴛʀᴜᴄᴛɪᴏɴs:  
 1️⃣ sᴄᴀɴ ᴛʜᴇ ǫʀ ᴄᴏᴅᴇ ᴀʙᴏᴠᴇ  
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴘᴀʏᴍᴇɴᴛ  
-3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.""")
+3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.**""")
 
             await query.message.delete()
 
@@ -825,7 +826,7 @@ async def callback(client, query):
                 photo=qr_image,
                 caption=caption,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=enums.ParseMode.MARKDOWN
+                parse_mode=enums.ParseMode.HTML
             )
             await query.answer()
 
