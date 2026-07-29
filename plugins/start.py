@@ -85,7 +85,7 @@ async def start(client, message):
         ]
 
         return await message.reply_text(
-            text=("""**👋 ʜᴇʟʟᴏ {}!
+            text=(f"""**👋 ʜᴇʟʟᴏ {mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
 
@@ -108,7 +108,7 @@ async def start(client, message):
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘᴀʏᴍᴇɴᴛ ᴠɪᴀ ᴜᴘɪ
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
-🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**""").format(mention),
+🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
             parse_mode=enums.ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
@@ -711,7 +711,7 @@ async def callback(client, query):
                 [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/DeadxFuck")]
             ]
             await query.message.edit_text(
-                text=("""**👋 ʜᴇʟʟᴏ {}!
+                text=(f"""**👋 ʜᴇʟʟᴏ {query.from_user.mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
 
@@ -734,7 +734,7 @@ async def callback(client, query):
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘᴀʏᴍᴇɴᴛ ᴠɪᴀ ᴜᴘɪ
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
-🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**""").format(query.from_user.mention),
+🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
                 parse_mode=enums.ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
@@ -753,22 +753,70 @@ async def callback(client, query):
             price, duration = price_map[data]
 
             buttons = [
-                [InlineKeyboardButton("ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ ✅", callback_data=f"paid1_{data}")],
-                [InlineKeyboardButton("ʙᴀᴄᴋ ⬅️", callback_data="start")]
+                [InlineKeyboardButton("✅ ᴘᴜʀᴄʜᴀsᴇ", callback_data=f"confirm_{data}")],
+                [InlineKeyboardButton("⬅️ ʙᴀᴄᴋ", callback_data="start")]
+            ]
+
+            await query.message.edit_text(
+                text=(f"""🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
+
+🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
+
+📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
+💰 ᴀᴍᴏᴜɴᴛ: {price}
+⏰ ᴠᴀʟɪᴅɪᴛʏ: {duration}
+
+👨🏻‍💻 ᴜsᴇʀ: {query.from_user.mention}
+
+📋 ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ:
+1️⃣ ᴘʟᴇᴀsᴇ ʀᴇᴠɪᴇᴡ ᴛʜᴇ ᴏʀᴅᴇʀ ᴅᴇᴛᴀɪʟs
+2️⃣ ᴄᴏɴꜰɪʀᴍ ᴛʜᴀᴛ ʏᴏᴜ ᴡɪsʜ ᴛᴏ ᴘᴜʀᴄʜᴀsᴇ
+3️⃣ ᴄʟɪᴄᴋ ✅ ᴄᴏɴꜰɪʀᴍ ᴘᴜʀᴄʜᴀsᴇ ʙᴇʟᴏᴡ
+
+⚠️ ɪᴍᴘᴏʀᴛᴀɴᴛ:
+• ᴘʟᴇᴀsᴇ ᴠᴇʀɪꜰʏ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙᴇꜰᴏʀᴇ ᴄᴏɴꜰɪʀᴍɪɴɢ
+• ᴏɴᴄᴇ ᴄᴏɴꜰɪʀᴍᴇᴅ, ᴘᴀʏᴍᴇɴᴛ ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ ᴡɪʟʟ ʙᴇ ɢᴇɴᴇʀᴀᴛᴇᴅ
+━━━━━━━━━━━━━━━━━━
+✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ""")
+                InlineKeyboardMarkup(buttons),
+                enums.ParseMode.MARKDOWN
+            )
+            await query.answer()
+
+        # Payment menu when a price is selected
+        elif data.startswith("confirm_mixp"):
+            price_map = {
+                "confirm_mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
+                "confirm_mixp2": ("₹199", "1 ᴍᴏɴᴛʜ"),
+                "confirm_mixp3": ("₹249", "3 ᴍᴏɴᴛʜs"),
+                "confirm_mixp4": ("₹399", "6 ᴍᴏɴᴛʜs"),
+                "confirm_mixp5": ("₹999", "1 ʏᴇᴀʀ")
+            }
+
+            price, duration = price_map[data]
+
+            buttons = [
+                [InlineKeyboardButton("✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ", callback_data=f"paid1_{data.replace('confirm_', '')}")],
+                [InlineKeyboardButton("⬅️ ʙᴀᴄᴋ", callback_data=data.replace("confirm_", ""))]
             ]
 
             upi_id = "goldensuplier@fam"
             upi_name = "KM Membership Bot"
             qr_image = generate_upi_qr(upi_id, upi_name, price)
 
-            caption = (
-                f"🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n\n"
-                f"📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ\n"
-                f"💰 ᴀᴍᴏᴜɴᴛ: {price}\n"
-                f"⏰ ᴠᴀʟɪᴅɪᴛʏ: {duration}\n"
-                f"💳 ᴜᴘɪ ɪᴅ: `{upi_id}` \n\n"
-                f"ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ."
-            )
+            caption = (f"""✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
+
+🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
+
+📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
+💰 ᴀᴍᴏᴜɴᴛ: {price}
+⏰ ᴠᴀʟɪᴅɪᴛʏ: {duration}
+💳 ᴜᴘɪ ɪᴅ: `{upi_id}`
+
+📱 ᴘᴀʏᴍᴇɴᴛ ɪɴsᴛʀᴜᴄᴛɪᴏɴs:  
+1️⃣ sᴄᴀɴ ᴛʜᴇ ǫʀ ᴄᴏᴅᴇ ᴀʙᴏᴠᴇ  
+2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴘᴀʏᴍᴇɴᴛ  
+3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.""")
 
             await query.message.delete()
 
@@ -802,8 +850,9 @@ async def callback(client, query):
                 text=(
                     f"🔍 ᴄʜᴇᴄᴋɪɴɢ ᴘᴀʏᴍᴇɴᴛ sᴛᴀᴛᴜs...\n\n"
                     f"🎫 ᴘʟᴀɴ: 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
-                    f"🕒 ᴠᴀʟɪᴅɪᴛʏ: {duration}\n"
+                    f"📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ\n"
                     f"💰 ᴀᴍᴏᴜɴᴛ: ₹{amount_expected}\n"
+                    f"🕒 ᴠᴀʟɪᴅɪᴛʏ: {duration}\n\n"
                     f"⚡ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴡʜɪʟᴇ ᴠᴇʀɪғʏ ʏᴏᴜʀ ᴛʀᴀɴsᴀᴄᴛɪᴏɴ."
                 ),
                 parse_mode=enums.ParseMode.MARKDOWN
@@ -850,7 +899,7 @@ async def callback(client, query):
                 channel_id = MIX_CHANNEL
                 if not channel_id:
                     return await query.message.edit_text(
-                        "⚠️ No channel assigned for this plan. Contact admin."
+                        "⚠️ ɴᴏ ᴄʜᴀɴɴᴇʟ ᴀssɪɢᴍᴇᴅ ғᴏʀ ᴛʜɪs ᴘʟᴀɴ. ᴄᴏɴᴀᴛᴄᴛ ᴀᴅᴍɪɴ."
                     )
 
             user = query.from_user
