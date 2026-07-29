@@ -86,7 +86,7 @@ async def start(client, message):
 
         return await message.reply_photo(
             photo="https://i.ibb.co/ZRmM9jLt/IMG-20260729-225814-934.jpg",
-            caption=(f"""**👋 ʜᴇʟʟᴏ {mention}!
+            caption=(f"""<b>👋 ʜᴇʟʟᴏ {mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
 
@@ -109,7 +109,7 @@ async def start(client, message):
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘᴀʏᴍᴇɴᴛ ᴠɪᴀ ᴜᴘɪ
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
-🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
+🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!</b>"""),
             parse_mode=enums.ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
@@ -712,7 +712,7 @@ async def callback(client, query):
                 [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/DeadxFuck")]
             ]
             await query.message.edit_text(
-                text=(f"""**👋 ʜᴇʟʟᴏ {query.from_user.mention}!
+                text=(f"""<b>👋 ʜᴇʟʟᴏ {query.from_user.mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
 
@@ -735,7 +735,7 @@ async def callback(client, query):
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘᴀʏᴍᴇɴᴛ ᴠɪᴀ ᴜᴘɪ
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
-🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
+🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!</b>"""),
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
@@ -759,7 +759,7 @@ async def callback(client, query):
             ]
 
             await query.message.edit_text(
-                text=(f"""**🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
+                text=(f"""<b>🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
 
 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
 
@@ -778,7 +778,7 @@ async def callback(client, query):
 • ᴘʟᴇᴀsᴇ ᴠᴇʀɪꜰʏ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙᴇꜰᴏʀᴇ ᴄᴏɴꜰɪʀᴍɪɴɢ
 • ᴏɴᴄᴇ ᴄᴏɴꜰɪʀᴍᴇᴅ, ᴘᴀʏᴍᴇɴᴛ ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ ᴡɪʟʟ ʙᴇ ɢᴇɴᴇʀᴀᴛᴇᴅ
 ━━━━━━━━━━━━━━━━━━
-✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ**"""),
+✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ</b>"""),
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
@@ -805,7 +805,7 @@ async def callback(client, query):
             upi_name = "KM Membership Bot"
             qr_image = generate_upi_qr(upi_id, upi_name, price)
 
-            caption = (f"""**✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
+            caption = (f"""<b>✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
 
 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
 
@@ -817,7 +817,7 @@ async def callback(client, query):
 📱 ᴘᴀʏᴍᴇɴᴛ ɪɴsᴛʀᴜᴄᴛɪᴏɴs:  
 1️⃣ sᴄᴀɴ ᴛʜᴇ ǫʀ ᴄᴏᴅᴇ ᴀʙᴏᴠᴇ  
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴘᴀʏᴍᴇɴᴛ  
-3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.**""")
+3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.</b>""")
 
             await query.message.delete()
 
