@@ -35,6 +35,38 @@ async def start(client, message):
         if not await db.is_user_exist(user_id):
             await db.add_user(user_id, first_name)
 
+        progress = await message.reply_text(
+            "╭────────────────╮\n"
+            "│ ░░░░░░░░░░ 0% │\n"
+            "╰────────────────╯",
+            quote=True
+        )
+
+        bars = [
+            ("█░░░░░░░░░", 10),
+            ("██░░░░░░░░", 20),
+            ("███░░░░░░░", 30),
+            ("████░░░░░░", 40),
+            ("█████░░░░░", 50),
+            ("██████░░░░", 60),
+            ("███████░░░", 70),
+            ("████████░░", 80),
+            ("█████████░", 90),
+            ("██████████", 100),
+        ]
+
+        for bar, percent in bars:
+            await progress.edit_text(
+                f"╭────────────────╮\n"
+                f"│ {bar} {percent}% │\n"
+                f"╰────────────────╯"
+            )
+            await asyncio.sleep(0.18)
+
+        await asyncio.sleep(0.5)
+
+        await progress.delete()
+
         buttons = [
             [
                 InlineKeyboardButton("⚡ 1 ᴡᴇᴇᴋ • ₹99", callback_data="mixp1"),
@@ -76,7 +108,7 @@ async def start(client, message):
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘᴀʏᴍᴇɴᴛ ᴠɪᴀ ᴜᴘɪ
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
-🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
+🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**""").format(mention),
             parse_mode=enums.ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(buttons),
             quote=True
@@ -702,7 +734,7 @@ async def callback(client, query):
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴘᴀʏᴍᴇɴᴛ ᴠɪᴀ ᴜᴘɪ
 3️⃣ ɢᴇᴛ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴇss ᴛᴏ ᴛʜᴇ ᴠɪᴘ ᴄʜᴀɴɴᴇʟ
 
-🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**"""),
+🚀 ᴄʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʟᴀɴ & ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!**""").format(query.from_user.mention),
                 parse_mode=enums.ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
