@@ -8,7 +8,7 @@ from pyrogram.errors import (
     UserIsBlocked,
     PeerIdInvalid
 )
-from plugins.config import LOG_CHANNEL, MIX_CHANNEL, CP_CHANNEL, MEGA_CHANNEL
+from plugins.config import LOG_CHANNEL, MIX_CHANNEL
 from plugins.database import db
 
 CLONE_ME = {}
@@ -21,12 +21,12 @@ CATEGORY_MAP = {
     },
     "cp": {
         "name": "CP/RP Collection",
-        "channel": CP_CHANNEL,
+        "channel": MIX_CHANNEL,
         "aliases": ["cp", "rp"]
     },
     "mega": {
         "name": "Mega Collection",
-        "channel": MEGA_CHANNEL,
+        "channel": MIX_CHANNEL,
         "aliases": ["mega"]
     }
 }
