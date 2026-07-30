@@ -84,8 +84,8 @@ async def start(client, message):
             [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/UnseenSuportProBot")]
         ]
 
-        return await message.reply_video(
-            video="https://files.catbox.moe/jva6zf.mp4",
+        return await message.reply_photo(
+            photo="https://files.catbox.moe/bj9mup.jpg",
             caption=(f"""<b>👋 ʜᴇʟʟᴏ {mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ ʙᴏᴛ
@@ -761,7 +761,7 @@ async def callback(client, query):
             await query.message.edit_text(
                 text=(f"""<b>🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
 
-🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
+🎬 ᴜɴsᴇᴇɴ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
 
 📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ
 💰 <b>ᴀᴍᴏᴜɴᴛ:</b> {price}
@@ -807,7 +807,7 @@ async def callback(client, query):
 
             caption = (f"""<b>✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
 
-🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
+🎬 ᴜɴsᴇᴇɴ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
 
 📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ
 💰 <b>ᴀᴍᴏᴜɴᴛ:</b> {price}
@@ -850,7 +850,7 @@ async def callback(client, query):
             await query.message.edit_text(
                 text=(
                     f"🔍 <b>ᴄʜᴇᴄᴋɪɴɢ ᴘᴀʏᴍᴇɴᴛ sᴛᴀᴛᴜs...</b>\n\n"
-                    f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
+                    f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴜɴsᴇᴇɴ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
                     f"📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ\n"
                     f"💰 <b>ᴀᴍᴏᴜɴᴛ:</b> ₹{amount_expected}\n"
                     f"🕒 <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}\n\n"
@@ -917,7 +917,7 @@ async def callback(client, query):
                     f"📢 <b>ɴᴇᴡ ᴘᴀʏᴍᴇɴᴛ ᴠᴇʀɪғɪᴇᴅ</b>\n\n"
                     f"👤 <b>ᴜsᴇʀ:</b> {user.mention} (<code>{user.id}</code>)\n"
                     f"💬 <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{user.username or 'None'}\n"
-                    f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
+                    f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴜɴsᴇᴇɴ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
                     f"🕒 <b>ᴅᴜʀᴀᴛɪᴏɴ:</b> {duration}\n"
                     f"💰 <b>ᴀᴍᴏᴜɴᴛ:</b> ₹{amount_expected}\n"
                     f"🧾 <b>ᴛxɴ ɪᴅ:</b> <code>{txn_id}</code>\n"
@@ -929,7 +929,7 @@ async def callback(client, query):
             await query.message.edit_text(
                 f"✅ <b>ᴘᴀʏᴍᴇɴᴛ ᴠᴇʀɪғɪᴇᴅ!</b>\n\n"
                 f"👤 ᴜsᴇʀ: {user.mention} (<code>{user.id}</code>)\n"
-                f"🎫 ᴘʟᴀɴ: 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
+                f"🎫 ᴘʟᴀɴ: 🎬 ᴜɴsᴇᴇɴ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
                 f"🕒 ᴅᴜʀᴀᴛɪᴏɴ: {duration}\n"
                 f"💰 ᴀᴍᴏᴜɴᴛ: ₹{amount_expected}\n"
                 f"🧾 ᴛxɴ ɪᴅ: <code>{txn_id}</code>\n"
