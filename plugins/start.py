@@ -69,19 +69,19 @@ async def start(client, message):
 
         buttons = [
             [
-                InlineKeyboardButton("⚡ 1 ᴡᴇᴇᴋ • ₹99", callback_data="mixp1"),
-                InlineKeyboardButton("🥈 1 ᴍᴏɴᴛʜ • ₹199", callback_data="mixp2")
+                InlineKeyboardButton("⚡ 500 ᴠɪᴅᴇᴏ • ₹249", callback_data="mixp1"),
+                InlineKeyboardButton("🥈 1000 ᴠɪᴅᴇᴏ • ₹449", callback_data="mixp2")
             ],
             [
-                InlineKeyboardButton("💳 3 ᴍᴏɴᴛʜs • ₹249", callback_data="mixp3"),
-                InlineKeyboardButton("🔥 6 ᴍᴏɴᴛʜs • ₹399", callback_data="mixp4")
+                InlineKeyboardButton("💳 2000 ᴠɪᴅᴇᴏ • ₹799", callback_data="mixp3"),
+                InlineKeyboardButton("🔥 5000 ᴠɪᴅᴇᴏ • ₹1999", callback_data="mixp4")
             ],
-            [InlineKeyboardButton("💎 1 ʏᴇᴀʀ • ₹999", callback_data="mixp5")],
+            [InlineKeyboardButton("💎 10000 ᴠɪᴅᴇᴏ • ₹2999", callback_data="mixp5")],
             [
                 InlineKeyboardButton("🎬 Fʀᴇᴇ ᴛʀɪᴀʟ", callback_data="trial"),
-                InlineKeyboardButton("📞 Cᴏɴᴛᴀᴄᴛ ᴍᴇ", url="https://t.me/DeadxFuck")
+                InlineKeyboardButton("📞 Cᴏɴᴛᴀᴄᴛ ᴍᴇ", url="https://t.me/UnseenSuportProBot")
             ],
-            [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/DeadxFuck")]
+            [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/UnseenSuportProBot")]
         ]
 
         return await message.reply_photo(
@@ -697,19 +697,19 @@ async def callback(client, query):
         if data == "start":
             buttons = [
                 [
-                    InlineKeyboardButton("⚡ 1 ᴡᴇᴇᴋ • ₹99", callback_data="mixp1"),
-                    InlineKeyboardButton("🥈 1 ᴍᴏɴᴛʜ • ₹199", callback_data="mixp2")
+                    InlineKeyboardButton("⚡ 500 ᴠɪᴅᴇᴏ • ₹249", callback_data="mixp1"),
+                    InlineKeyboardButton("🥈 1 ᴠɪᴅᴇᴏ • ₹449", callback_data="mixp2")
                 ],
                 [
-                    InlineKeyboardButton("💳 3 ᴍᴏɴᴛʜs • ₹249", callback_data="mixp3"),
-                    InlineKeyboardButton("🔥 6 ᴍᴏɴᴛʜs • ₹399", callback_data="mixp4")
+                    InlineKeyboardButton("💳 3 ᴠɪᴅᴇᴏ • ₹799", callback_data="mixp3"),
+                    InlineKeyboardButton("🔥 6 ᴠɪᴅᴇᴏ • ₹1999", callback_data="mixp4")
                 ],
-                [InlineKeyboardButton("💎 1 ʏᴇᴀʀ • ₹999", callback_data="mixp5")],
+                [InlineKeyboardButton("💎 1 ᴠɪᴅᴇᴏ • ₹2999", callback_data="mixp5")],
                 [
                     InlineKeyboardButton("🎬 Fʀᴇᴇ ᴛʀɪᴀʟ", callback_data="trial"),
-                    InlineKeyboardButton("📞 Cᴏɴᴛᴀᴄᴛ ᴍᴇ", url="https://t.me/DeadxFuck")
+                    InlineKeyboardButton("📞 Cᴏɴᴛᴀᴄᴛ ᴍᴇ", url="https://t.me/UnseenSuportProBot")
                 ],
-                [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/DeadxFuck")]
+                [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/UnseenSuportProBot")]
             ]
             await query.message.edit_text(
                 text=(f"""<b>👋 ʜᴇʟʟᴏ {query.from_user.mention}!
@@ -741,7 +741,7 @@ async def callback(client, query):
             )
             await query.answer()
 
-        # Payment menu when a price is selected
+        # Confirmation menu when a price is selected
         elif data.startswith("mixp"):
             price_map = {
                 "mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
@@ -761,30 +761,30 @@ async def callback(client, query):
             await query.message.edit_text(
                 text=(f"""<b>🛒 ᴘᴜʀᴄʜᴀsᴇ ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜɪʀᴇᴅ
 
-🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
+🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
 
-📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
-💰 ᴀᴍᴏᴜɴᴛ: {price}
-⏰ ᴠᴀʟɪᴅɪᴛʏ: {duration}
+📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
+💰 <b>ᴀᴍᴏᴜɴᴛ:</b> {price}
+⏰ <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}
 
-👨🏻‍💻 ᴜsᴇʀ: {query.from_user.mention}
+👨🏻‍💻 <b>ᴜsᴇʀ: {query.from_user.mention}</b>
 
-📋 ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ:
+<b>📋 ᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ:</b>
 1️⃣ ᴘʟᴇᴀsᴇ ʀᴇᴠɪᴇᴡ ᴛʜᴇ ᴏʀᴅᴇʀ ᴅᴇᴛᴀɪʟs
 2️⃣ ᴄᴏɴꜰɪʀᴍ ᴛʜᴀᴛ ʏᴏᴜ ᴡɪsʜ ᴛᴏ ᴘᴜʀᴄʜᴀsᴇ
 3️⃣ ᴄʟɪᴄᴋ ✅ ᴄᴏɴꜰɪʀᴍ ᴘᴜʀᴄʜᴀsᴇ ʙᴇʟᴏᴡ
 
-⚠️ ɪᴍᴘᴏʀᴛᴀɴᴛ:
+<b>⚠️ ɪᴍᴘᴏʀᴛᴀɴᴛ:</b>
 • ᴘʟᴇᴀsᴇ ᴠᴇʀɪꜰʏ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙᴇꜰᴏʀᴇ ᴄᴏɴꜰɪʀᴍɪɴɢ
 • ᴏɴᴄᴇ ᴄᴏɴꜰɪʀᴍᴇᴅ, ᴘᴀʏᴍᴇɴᴛ ɪɴꜱᴛʀᴜᴄᴛɪᴏɴꜱ ᴡɪʟʟ ʙᴇ ɢᴇɴᴇʀᴀᴛᴇᴅ
 ━━━━━━━━━━━━━━━━━━
-✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ</b>"""),
+<b>✶ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 50% ᴏꜰꜰ ᴡʜᴇɴ ʏᴏᴜ ʀᴇɴᴇᴡ ᴛʜɪꜱ ᴘʟᴀɴ</b>"""),
                 parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             await query.answer()
 
-        # Payment menu when a price is selected
+        # Payment menu when a confirm
         elif data.startswith("confirm_mixp"):
             price_map = {
                 "confirm_mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
@@ -807,17 +807,17 @@ async def callback(client, query):
 
             caption = (f"""<b>✅ ᴏʀᴅᴇʀ ᴄʀᴇᴀᴛᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ
 
-🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ
+🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
 
-📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
-💰 ᴀᴍᴏᴜɴᴛ: {price}
-⏰ ᴠᴀʟɪᴅɪᴛʏ: {duration}
-💳 ᴜᴘɪ ɪᴅ: `{upi_id}`
+📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
+💰 <b>ᴀᴍᴏᴜɴᴛ:</b> {price}
+⏰ <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}
+💳 <b>ᴜᴘɪ ɪᴅ:</b> <code>{upi_id}</code>
 
-📱 ᴘᴀʏᴍᴇɴᴛ ɪɴsᴛʀᴜᴄᴛɪᴏɴs:  
+<b>📱 ᴘᴀʏᴍᴇɴᴛ ɪɴsᴛʀᴜᴄᴛɪᴏɴs:</b>  
 1️⃣ sᴄᴀɴ ᴛʜᴇ ǫʀ ᴄᴏᴅᴇ ᴀʙᴏᴠᴇ  
 2️⃣ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴘᴀʏᴍᴇɴᴛ  
-3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.</b>""")
+3️⃣ ᴏɴᴄᴇ ʏᴏᴜ ᴘᴀʏ, ᴄʟɪᴄᴋ ✅ ᴘᴀʏᴍᴇɴᴛ ᴅᴏɴᴇ.""")
 
             await query.message.delete()
 
@@ -833,7 +833,7 @@ async def callback(client, query):
         # User clicked Payment Done
         elif data.startswith("paid1_"):
             plan_key = data.replace("paid1_", "")
-            price_map = {
+            plan_map = {
                 "mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
                 "mixp2": ("₹199", "1 ᴍᴏɴᴛʜ"),
                 "mixp3": ("₹249", "3 ᴍᴏɴᴛʜs"),
@@ -849,14 +849,14 @@ async def callback(client, query):
 
             await query.message.edit_text(
                 text=(
-                    f"🔍 ᴄʜᴇᴄᴋɪɴɢ ᴘᴀʏᴍᴇɴᴛ sᴛᴀᴛᴜs...\n\n"
-                    f"🎫 ᴘʟᴀɴ: 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
-                    f"📢 ᴄʜᴀɴɴᴇʟ: ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ\n"
-                    f"💰 ᴀᴍᴏᴜɴᴛ: ₹{amount_expected}\n"
-                    f"🕒 ᴠᴀʟɪᴅɪᴛʏ: {duration}\n\n"
-                    f"⚡ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴡʜɪʟᴇ ᴠᴇʀɪғʏ ʏᴏᴜʀ ᴛʀᴀɴsᴀᴄᴛɪᴏɴ."
+                    f"🔍 <b>ᴄʜᴇᴄᴋɪɴɢ ᴘᴀʏᴍᴇɴᴛ sᴛᴀᴛᴜs...</b>\n\n"
+                    f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
+                    f"📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ\n"
+                    f"💰 <b>ᴀᴍᴏᴜɴᴛ:</b> ₹{amount_expected}\n"
+                    f"🕒 <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}\n\n"
+                    f"⚡ <b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴡʜɪʟᴇ ᴠᴇʀɪғʏ ʏᴏᴜʀ ᴛʀᴀɴsᴀᴄᴛɪᴏɴ.</b>"
                 ),
-                parse_mode=enums.ParseMode.MARKDOWN
+                parse_mode=enums.ParseMode.HTML
             )
 
             now = datetime.now(pytz.UTC)
@@ -1062,12 +1062,10 @@ async def callback(client, query):
 
             await query.answer()
 
-        # Close
-        elif data == "close":
+        # Free Trial
+        elif data == "trial":
             await query.answer()
-            await query.message.delete()
-            if query.message.reply_to_message:
-                await query.message.reply_to_message.delete()
+            
 
         # Cancel Broadcast
         elif data == "cancel_broadcast":
