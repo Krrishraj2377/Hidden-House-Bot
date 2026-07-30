@@ -7,7 +7,7 @@ try:
     API_ID = int(os.environ.get("API_ID", "35384565"))
     API_HASH = os.environ.get("API_HASH", "dbba8a136120df358bd3b6e1fbc18792")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "8994248340:AAHqVfhnMcObZxoBJWsj5gMLESIpTVWW1-A")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "HiddenHouseXdBot") # without @
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "UnseenServiceRobot") # without @
 
     # Database Information
     DB_URI = os.environ.get("DB_URI", "mongodb+srv://Test:Test123@test.ysxzrpt.mongodb.net/?appName=Test")
@@ -19,8 +19,6 @@ try:
     # Channel Information
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1003407592547"))
     MIX_CHANNEL = int(os.environ.get("MIX_CHANNEL", "-1003749230010"))
-    CP_CHANNEL = int(os.environ.get("CP_CHANNEL", "-1003264225931"))
-    MEGA_CHANNEL = int(os.environ.get("MEGA_CHANNEL", "-1003212677737"))
 except Exception as e:
     print("⚠️ Error loading config.py:", e)
     traceback.print_exc()

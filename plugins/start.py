@@ -122,7 +122,7 @@ async def start(client, message):
         print(f"⚠️ Start Handler Error: {e}")
         print(traceback.format_exc())
 
-@Client.on_message(filters.command("addpremium") & filters.private & filters.user(ADMINS))
+"""@Client.on_message(filters.command("addpremium") & filters.private & filters.user(ADMINS))
 async def add_premium(client, message):
     try:
         parts = message.text.split()
@@ -385,7 +385,7 @@ async def resend_links(client, message):
             f"⚠️ Resend Link Handler Error:\n\n<code>{e}</code>\n\nTraceback:\n<code>{traceback.format_exc()}</code>."
         )
         print(f"⚠️ Resend Link Handler Error: {e}")
-        print(traceback.format_exc())
+        print(traceback.format_exc())"""
 
 @Client.on_message(filters.command("broadcast") & filters.private & filters.user(ADMINS))
 async def broadcast(client, message):
@@ -602,7 +602,7 @@ async def premium_stats(client, message):
         print(f"⚠️ Premium Stats Error: {e}")
         print(traceback.format_exc())
 
-@Client.on_message(filters.command("kickexpired") & filters.private & filters.user(ADMINS))
+"""@Client.on_message(filters.command("kickexpired") & filters.private & filters.user(ADMINS))
 async def kickexpired(client, message):
     try:
         if len(message.command) < 2:
@@ -679,7 +679,7 @@ async def kickexpired(client, message):
             f"⚠️ Kick Expired Error:\n\n<code>{e}</code>\n\nTraceback:\n<code>{traceback.format_exc()}</code>"
         )
         print(f"⚠️ Kick Expired Error: {e}")
-        print(traceback.format_exc())
+        print(traceback.format_exc())"""
 
 @Client.on_callback_query()
 async def callback(client, query):
@@ -698,13 +698,13 @@ async def callback(client, query):
             buttons = [
                 [
                     InlineKeyboardButton("⚡ 500 ᴠɪᴅᴇᴏ • ₹249", callback_data="mixp1"),
-                    InlineKeyboardButton("🥈 1 ᴠɪᴅᴇᴏ • ₹449", callback_data="mixp2")
+                    InlineKeyboardButton("🥈 1000 ᴠɪᴅᴇᴏ • ₹449", callback_data="mixp2")
                 ],
                 [
-                    InlineKeyboardButton("💳 3 ᴠɪᴅᴇᴏ • ₹799", callback_data="mixp3"),
-                    InlineKeyboardButton("🔥 6 ᴠɪᴅᴇᴏ • ₹1999", callback_data="mixp4")
+                    InlineKeyboardButton("💳 2000 ᴠɪᴅᴇᴏ • ₹799", callback_data="mixp3"),
+                    InlineKeyboardButton("🔥 5000 ᴠɪᴅᴇᴏ • ₹1999", callback_data="mixp4")
                 ],
-                [InlineKeyboardButton("💎 1 ᴠɪᴅᴇᴏ • ₹2999", callback_data="mixp5")],
+                [InlineKeyboardButton("💎 10000 ᴠɪᴅᴇᴏ • ₹2999", callback_data="mixp5")],
                 [
                     InlineKeyboardButton("🎬 Fʀᴇᴇ ᴛʀɪᴀʟ", callback_data="trial"),
                     InlineKeyboardButton("📞 Cᴏɴᴛᴀᴄᴛ ᴍᴇ", url="https://t.me/UnseenSuportProBot")
@@ -744,11 +744,11 @@ async def callback(client, query):
         # Confirmation menu when a price is selected
         elif data.startswith("mixp"):
             price_map = {
-                "mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
-                "mixp2": ("₹199", "1 ᴍᴏɴᴛʜ"),
-                "mixp3": ("₹249", "3 ᴍᴏɴᴛʜs"),
-                "mixp4": ("₹399", "6 ᴍᴏɴᴛʜs"),
-                "mixp5": ("₹999", "1 ʏᴇᴀʀ")
+                "mixp1": ("₹249", "500 ᴠɪᴅᴇᴏ"),
+                "mixp2": ("₹449", "1000 ᴠɪᴅᴇᴏ"),
+                "mixp3": ("₹799", "2000 ᴠɪᴅᴇᴏ"),
+                "mixp4": ("₹1999", "5000 ᴠɪᴅᴇᴏ"),
+                "mixp5": ("₹2999", "10000 ᴠɪᴅᴇᴏ")
             }
 
             price, duration = price_map[data]
@@ -787,11 +787,11 @@ async def callback(client, query):
         # Payment menu when a confirm
         elif data.startswith("confirm_mixp"):
             price_map = {
-                "confirm_mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
-                "confirm_mixp2": ("₹199", "1 ᴍᴏɴᴛʜ"),
-                "confirm_mixp3": ("₹249", "3 ᴍᴏɴᴛʜs"),
-                "confirm_mixp4": ("₹399", "6 ᴍᴏɴᴛʜs"),
-                "confirm_mixp5": ("₹999", "1 ʏᴇᴀʀ")
+                "confirm_mixp1": ("₹249", "500 ᴠɪᴅᴇᴏ"),
+                "confirm_mixp2": ("₹449", "1000 ᴠɪᴅᴇᴏ"),
+                "confirm_mixp3": ("₹799", "2000 ᴠɪᴅᴇᴏ"),
+                "confirm_mixp4": ("₹1999", "5000 ᴠɪᴅᴇᴏ"),
+                "confirm_mixp5": ("₹2999", "10000 ᴠɪᴅᴇᴏ")
             }
 
             price, duration = price_map[data]
@@ -834,15 +834,15 @@ async def callback(client, query):
         elif data.startswith("paid1_"):
             plan_key = data.replace("paid1_", "")
             plan_map = {
-                "mixp1": ("₹99", "1 ᴡᴇᴇᴋ"),
-                "mixp2": ("₹199", "1 ᴍᴏɴᴛʜ"),
-                "mixp3": ("₹249", "3 ᴍᴏɴᴛʜs"),
-                "mixp4": ("₹399", "6 ᴍᴏɴᴛʜs"),
-                "mixp5": ("₹999", "1 ʏᴇᴀʀ")
+                "mixp1": ("₹249", "500 ᴠɪᴅᴇᴏ"),
+                "mixp2": ("₹449", "1000 ᴠɪᴅᴇᴏ"),
+                "mixp3": ("₹799", "2000 ᴠɪᴅᴇᴏ"),
+                "mixp4": ("₹1999", "5000 ᴠɪᴅᴇᴏ"),
+                "mixp5": ("₹2999", "10000 ᴠɪᴅᴇᴏ")
             }
 
             if plan_key not in plan_map:
-                return await query.message.edit_text("⚠️ Invalid plan key.")
+                return await query.message.edit_text("⚠️ ɪɴᴠᴀʟɪᴅ ᴘʟᴀɴ ᴋᴇʏ.")
 
             price, duration = plan_map[plan_key]
             amount_expected = int(price.replace("₹", ""))
@@ -914,37 +914,37 @@ async def callback(client, query):
             for admin_id in ADMINS:
                 await client.send_message(
                     admin_id,
-                    f"📢 <b>New Payment Verified</b>\n\n"
-                    f"👤 <b>User:</b> {user.mention} (<code>{user.id}</code>)\n"
-                    f"💬 <b>Username:</b> @{user.username or 'None'}\n"
-                    f"🎫 <b>Plan:</b> 🎬 Mixed Collection\n"
-                    f"🕒 <b>Duration:</b> {duration}\n"
-                    f"💰 <b>Amount:</b> ₹{amount_expected}\n"
-                    f"🧾 <b>Txn ID:</b> <code>{txn_id}</code>\n"
-                    f"⏰ <b>Time:</b> {matched_txn['time']}\n"
-                    f"🔗 <b>Invite Link:</b> {invite.invite_link}",
+                    f"📢 <b>ɴᴇᴡ ᴘᴀʏᴍᴇɴᴛ ᴠᴇʀɪғɪᴇᴅ</b>\n\n"
+                    f"👤 <b>ᴜsᴇʀ:</b> {user.mention} (<code>{user.id}</code>)\n"
+                    f"💬 <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{user.username or 'None'}\n"
+                    f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
+                    f"🕒 <b>ᴅᴜʀᴀᴛɪᴏɴ:</b> {duration}\n"
+                    f"💰 <b>ᴀᴍᴏᴜɴᴛ:</b> ₹{amount_expected}\n"
+                    f"🧾 <b>ᴛxɴ ɪᴅ:</b> <code>{txn_id}</code>\n"
+                    f"⏰ <b>ᴛɪᴍᴇ:</b> {matched_txn['time']}\n"
+                    f"🔗 <b>ɪɴᴠɪᴛᴇ ʟɪɴᴋ:</b> {invite.invite_link}",
                     parse_mode=enums.ParseMode.HTML
                 )
 
             await query.message.edit_text(
-                f"✅ <b>Payment Verified!</b>\n\n"
-                f"👤 User: {user.mention} (<code>{user.id}</code>)\n"
-                f"🎫 Plan: 🎬 Mixed Collection\n"
-                f"🕒 Duration: {duration}\n"
-                f"💰 Amount: ₹{amount_expected}\n"
-                f"🧾 Txn ID: <code>{txn_id}</code>\n"
-                f"⏰ Time: {matched_txn['time']}\n\n"
-                f"🎟️ Your Access Link:\n{invite.invite_link}\n\n"
-                f"⚠️ Link expires after joining.",
+                f"✅ <b>ᴘᴀʏᴍᴇɴᴛ ᴠᴇʀɪғɪᴇᴅ!</b>\n\n"
+                f"👤 ᴜsᴇʀ: {user.mention} (<code>{user.id}</code>)\n"
+                f"🎫 ᴘʟᴀɴ: 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
+                f"🕒 ᴅᴜʀᴀᴛɪᴏɴ: {duration}\n"
+                f"💰 ᴀᴍᴏᴜɴᴛ: ₹{amount_expected}\n"
+                f"🧾 ᴛxɴ ɪᴅ: <code>{txn_id}</code>\n"
+                f"⏰ ᴛɪᴍᴇ: {matched_txn['time']}\n\n"
+                f"🎟️ ʏᴏᴜʀ ᴀᴄᴄᴇss ʟɪɴᴋ:\n{invite.invite_link}\n\n"
+                f"⚠️ ʟɪɴᴋ ᴇxᴘɪʀᴇs ᴀғᴛᴇʀ ᴊᴏɪɴɪɴɢ.",
                 parse_mode=enums.ParseMode.HTML
             )
 
             days_map = {
-                "1 ᴡᴇᴇᴋ": 7,
-                "1 ᴍᴏɴᴛʜ": 30,
-                "3 ᴍᴏɴᴛʜs": 90,
-                "6 ᴍᴏɴᴛʜs": 180,
-                "1 ʏᴇᴀʀ": 3650
+                "500 ᴠɪᴅᴇᴏ": 7,
+                "1000 ᴠɪᴅᴇᴏ": 30,
+                "2000 ᴠɪᴅᴇᴏ": 90,
+                "5000 ᴠɪᴅᴇᴏ": 180,
+                "10000 ᴠɪᴅᴇᴏ": 3650
             }
 
             days = days_map.get(duration, 7)
@@ -969,7 +969,7 @@ async def callback(client, query):
 
             await query.answer()
 
-        elif data == "subscription":
+        """elif data == "subscription":
             buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="start")]]
 
             subs = await db.get_user_subscription(user_id)
@@ -1060,7 +1060,7 @@ async def callback(client, query):
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
 
-            await query.answer()
+            await query.answer()"""
 
         # Free Trial
         elif data == "trial":
@@ -1116,7 +1116,7 @@ async def callback(client, query):
         print(traceback.format_exc())
         await query.answer("❌ An error occurred. The admin has been notified.", show_alert=True)
 
-@Client.on_chat_join_request()
+"""@Client.on_chat_join_request()
 async def handle_join_request(client, request):
     try:
         user_id = request.from_user.id
@@ -1204,4 +1204,4 @@ async def handle_join_request(client, request):
             f"⚠️ handle_join_request Error:\n\n<code>{e}</code>\n\nTraceback:\n<code>{traceback.format_exc()}</code>."
         )
         print(f"⚠️ handle_join_request Error: {e}")
-        print(traceback.format_exc())
+        print(traceback.format_exc())"""
