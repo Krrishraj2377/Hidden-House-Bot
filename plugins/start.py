@@ -84,8 +84,8 @@ async def start(client, message):
             [InlineKeyboardButton("🌗 USDT / BINANCE / CRYPTO", url="https://t.me/UnseenSuportProBot")]
         ]
 
-        return await message.reply_photo(
-            photo="https://i.ibb.co/ZRmM9jLt/IMG-20260729-225814-934.jpg",
+        return await message.reply_video(
+            video="https://files.catbox.moe/jva6zf.mp4",
             caption=(f"""<b>👋 ʜᴇʟʟᴏ {mention}!
 
 ✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ ʙᴏᴛ
