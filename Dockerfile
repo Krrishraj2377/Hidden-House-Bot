@@ -3,7 +3,7 @@ FROM python:3.10.8
 # Hide pip root warning
 ENV PIP_ROOT_USER_ACTION=ignore
 
-WORKDIR /Hidden-House
+WORKDIR /Unseen-Service
 
 COPY requirements.txt .
 
