@@ -1064,6 +1064,30 @@ async def callback(client, query):
 
         # Free Trial
         elif data == "trial":
+            buttons = [
+                [InlineKeyboardButton("✅ ᴄʟɪᴄᴋ ʜᴇʀᴇ", url=f"https://t.me/unseenprobot?start=Z2V0LTUwMjIyMzcwMTA4NTAtMjYxMTU2MzI0NTY0MjA")],
+                [InlineKeyboardButton("⬅️ ʙᴀᴄᴋ", callback_data="start")]
+            ]
+
+            await query.message.edit_text(
+                text=(f"""<b>🎁 ꜰʀᴇᴇ ᴛʀɪᴀʟ ᴀᴄᴛɪᴠᴀᴛᴇᴅ</b>
+
+⏳ <b>ᴛʀɪᴀʟ ᴅᴜʀᴀᴛɪᴏɴ:</b> sᴏᴍᴇ ᴛɪᴍᴇs
+🕒 <b>ᴇxᴘɪʀᴇs ᴀᴛ:</b> sᴏᴍᴇ ᴛɪᴍᴇs
+
+━━━━━━━━━━━━━━━━━━
+📌 <b>sᴛᴀᴛᴜs:</b> ᴛʀɪᴀʟ ᴀᴄᴛɪᴠᴇ 🎉
+━━━━━━━━━━━━━━━━━━
+
+<b>🚀 ʏᴏᴜ ɴᴏᴡ ʜᴀᴠᴇ ᴛᴇᴍᴘᴏʀᴀʀʏ ᴀᴄᴄᴇss ᴛᴏ ᴘʀᴇᴍɪᴜᴍ ᴄᴏɴᴛᴇɴᴛ.
+
+⚠️ ᴛʜɪs ᴛʀɪᴀʟ ɪs ᴠᴀʟɪᴅ ꜰᴏʀ ᴏɴʟʏ sᴏᴍᴇ ᴛɪᴍᴇs.  
+⏰ ᴀꜰᴛᴇʀ ᴇxᴘɪʀʏ, ᴀᴄᴄᴇss ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʀᴇᴍᴏᴠᴇᴅ.
+
+💳 ᴘᴜʀᴄʜᴀsᴇ ᴀ ᴍᴇᴍʙᴇʀsʜɪᴘ ᴛᴏ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss.</b>"""),
+                parse_mode=enums.ParseMode.HTML,
+                reply_markup=InlineKeyboardMarkup(buttons)
+            )
             await query.answer()
             
 
