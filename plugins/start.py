@@ -969,7 +969,7 @@ async def callback(client, query):
 
             await query.answer()
 
-        """elif data == "subscription":
+        elif data == "subscription":
             buttons = [[InlineKeyboardButton("⬅️ Back", callback_data="start")]]
 
             subs = await db.get_user_subscription(user_id)
@@ -1060,7 +1060,7 @@ async def callback(client, query):
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
 
-            await query.answer()"""
+            await query.answer()
 
         # Free Trial
         elif data == "trial":
