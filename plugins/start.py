@@ -11,7 +11,7 @@ from pyrogram.errors import (
     PeerIdInvalid,
     HideRequesterMissing
 )
-from plugins.config import ADMINS, LOG_CHANNEL, MIX_CHANNEL, CP_CHANNEL, MEGA_CHANNEL
+from plugins.config import ADMINS, LOG_CHANNEL, MIX_CHANNEL
 from plugins.database import db
 from plugins.helper import *
 
@@ -88,7 +88,7 @@ async def start(client, message):
             photo="https://i.ibb.co/ZRmM9jLt/IMG-20260729-225814-934.jpg",
             caption=(f"""<b>👋 ʜᴇʟʟᴏ {mention}!
 
-✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
+✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ ʙᴏᴛ
 
 🔐 ᴘʀɪᴠᴀᴛᴇ • ᴠɪᴘ • 🔞 18+ ᴏɴʟʏ
 🔥 ʀᴀᴡ • ʀᴇᴀʟ • ᴜɴᴄᴇɴsᴏʀᴇᴅ
@@ -714,7 +714,7 @@ async def callback(client, query):
             await query.message.edit_text(
                 text=(f"""<b>👋 ʜᴇʟʟᴏ {query.from_user.mention}!
 
-✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ ʙᴏᴛ
+✨ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ ʙᴏᴛ
 
 🔐 ᴘʀɪᴠᴀᴛᴇ • ᴠɪᴘ • 🔞 18+ ᴏɴʟʏ
 🔥 ʀᴀᴡ • ʀᴇᴀʟ • ᴜɴᴄᴇɴsᴏʀᴇᴅ
@@ -763,7 +763,7 @@ async def callback(client, query):
 
 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
 
-📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
+📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ
 💰 <b>ᴀᴍᴏᴜɴᴛ:</b> {price}
 ⏰ <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}
 
@@ -809,7 +809,7 @@ async def callback(client, query):
 
 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ</b>
 
-📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ
+📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ
 💰 <b>ᴀᴍᴏᴜɴᴛ:</b> {price}
 ⏰ <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}
 💳 <b>ᴜᴘɪ ɪᴅ:</b> <code>{upi_id}</code>
@@ -851,7 +851,7 @@ async def callback(client, query):
                 text=(
                     f"🔍 <b>ᴄʜᴇᴄᴋɪɴɢ ᴘᴀʏᴍᴇɴᴛ sᴛᴀᴛᴜs...</b>\n\n"
                     f"🎫 <b>ᴘʟᴀɴ:</b> 🎬 ᴍɪxᴇᴅ ᴄᴏʟʟᴇᴄᴛɪᴏɴ\n"
-                    f"📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ʜɪᴅᴅᴇɴ ʜᴏᴜsᴇ\n"
+                    f"📢 <b>ᴄʜᴀɴɴᴇʟ:</b> ᴜɴsᴇᴇɴ sᴇʀᴠɪᴄᴇ\n"
                     f"💰 <b>ᴀᴍᴏᴜɴᴛ:</b> ₹{amount_expected}\n"
                     f"🕒 <b>ᴠᴀʟɪᴅɪᴛʏ:</b> {duration}\n\n"
                     f"⚡ <b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴡʜɪʟᴇ ᴠᴇʀɪғʏ ʏᴏᴜʀ ᴛʀᴀɴsᴀᴄᴛɪᴏɴ.</b>"
