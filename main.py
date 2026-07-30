@@ -15,7 +15,7 @@ RESTART_TXT = """<b><u>BOT RESTARTED !</u></b>
 📅 Date : <code>{}</code>
 ⏰ Time : <code>{}</code>
 🌐 Timezone : <code>Asia/Kolkata</code>
-🤖 Bot : @HiddenHouseXdBot
+🤖 Bot : @UnseenServiceRobot
 
 ✅ Bot is now online and ready to process requests."""
 
@@ -23,10 +23,10 @@ async def set_auto_menu(client):
     try:
         owner_cmds = [
             BotCommand("start", "Check I am alive"),
-            BotCommand("addpremium", "Add premium users"),
-            BotCommand("removepremium", "Remove premium users"),
-            BotCommand("resendlinks", "Resend link to users"),
-            BotCommand("kickexpired", "Kick expired user"),
+            #BotCommand("addpremium", "Add premium users"),
+            #BotCommand("removepremium", "Remove premium users"),
+            #BotCommand("resendlinks", "Resend link to users"),
+            #BotCommand("kickexpired", "Kick expired user"),
             BotCommand("broadcast", "Broadcast a message to users"),
             BotCommand("stats", "View bot statistics"),
             BotCommand("premiumstats", "View bot premium user statistics")
@@ -42,7 +42,7 @@ async def set_auto_menu(client):
         print(f"⚠️ Set Menu Error: {e}")
         print(traceback.format_exc())
 
-async def expiry_runtime_watcher(client):
+"""async def expiry_runtime_watcher(client):
     while True:
         try:
             now = datetime.utcnow()
@@ -107,12 +107,12 @@ async def expiry_runtime_watcher(client):
             await asyncio.sleep(60)
         except Exception as e:
             print(f"⚠️ Expiry watcher error: {e}")
-            await asyncio.sleep(10)
+            await asyncio.sleep(10)"""
 
 class Bot(Client):
     def __init__(self):
         super().__init__(
-            "Hidden House Bot",
+            "Unseen Service Bot",
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
@@ -122,7 +122,7 @@ class Bot(Client):
     async def start(self):
         await super().start()
         await set_auto_menu(self)
-        asyncio.create_task(expiry_runtime_watcher(self))
+        #asyncio.create_task(expiry_runtime_watcher(self))
         today = date.today()
         tz = pytz.timezone("Asia/Kolkata")
         now = datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
